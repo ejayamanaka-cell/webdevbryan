@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidepool Aquarium</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="kicker">VIRTUAL AQUARIUM</p>
+        <h1>Tidepool<span>.</span></h1>
+      </div>
+      <button id="motion" type="button" aria-pressed="false"><span aria-hidden="true">Ⅱ</span> Pause</button>
+    </header>
+    <section class="tank" aria-label="Aquarium">
+      <canvas id="water" role="img" aria-label="Colorful tropical fish swimming among sea plants">An illustrated tropical aquarium.</canvas>
+      <button id="surface" type="button" aria-label="Drop food at the water surface"><span aria-hidden="true">↓</span> Drop food here</button>
+    </section>
+    <footer>
+      <p>Click or tap along the surface to feed the 9 fish.</p>
+      <button id="feed" type="button"><span aria-hidden="true">✦</span> Feed fish</button>
+    </footer>
+    <p id="status" class="sr-only" role="status"></p>
+  </main>
+</body>
+</html>

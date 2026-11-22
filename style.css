@@ -1,0 +1,64 @@
+* { box-sizing: border-box; }
+:root {
+  color-scheme: dark;
+  font-family: "Aptos", system-ui, sans-serif;
+  color: #e0f5ee;
+  background: #071a21;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 0%, #12363c, transparent 65%);
+}
+main { width: min(1100px, 100% - 40px); margin: 0 auto; padding: clamp(26px, 5vw, 65px) 0; }
+header, footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+header { margin-bottom: 20px; }
+.kicker { margin: 0 0 5px; color: #9ce1cf; font: 600 .69rem system-ui; letter-spacing: .24em; }
+h1 { margin: 0; font: 400 clamp(3rem, 8vw, 6rem)/.98 Georgia, serif; letter-spacing: -.075em; }
+h1 span { color: #80dfbd; }
+.tank {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid #478b88;
+  background: #104952;
+  box-shadow: 0 20px 60px #0006, 0 0 36px #65e5cf15;
+}
+canvas { display: block; width: 100%; height: clamp(330px, 53vw, 565px); }
+footer { margin-top: 16px; }
+footer p { margin: 0; color: #b5d0cc; font-size: .9rem; }
+button {
+  border: 1px solid #457674;
+  border-radius: 999px;
+  padding: 11px 16px;
+  min-height: 44px;
+  font: 650 .85rem system-ui;
+  color: inherit;
+  background: #102d35;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button span { margin-right: 4px; }
+button:hover { background: #1d4549; }
+button:focus-visible { outline: 3px solid #ffe1a3; outline-offset: 3px; }
+#surface {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #c1fff276;
+  border-radius: 0;
+  color: #e2fff4;
+  background: #082e388a;
+  cursor: crosshair;
+}
+#surface:hover { background: #082e38b8; }
+#surface:focus-visible { outline-offset: -4px; }
+#feed { background: #a6e9c7; color: #10382e; border-color: #a6e9c7; }
+#feed:hover { background: #d5f9e6; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 450px) {
+  main { width: calc(100% - 24px); }
+  .tank { border-radius: 17px; }
+  footer p { font-size: .8rem; }
+}
